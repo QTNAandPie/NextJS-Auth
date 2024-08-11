@@ -20,7 +20,7 @@ interface CardWrapperProps {
 
 export function CardWrapper({ children, headerLabel, backButtonLabel, backButtonHref, showSocial }: CardWrapperProps) {
     return (
-        <Card className="w-[400px]">
+        <Card className="w-[400px] shadow-xl">
             <CardHeader>
                 <Header label={headerLabel} />
             </CardHeader>
