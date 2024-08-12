@@ -1,10 +1,13 @@
 <h1>Next.JS Social Page (In develop)</h1>
 
-This is the Next.JS Social Page that allow you to posting and sharing the good time
-By using Next.JS, TailwindCSS, Shadcn(React Components FrameWork) make the page something beautiful
+- This is the Next.JS Social Page that allow you to posting and sharing the good time
+- By using Next.JS, TailwindCSS, Shadcn(React Components FrameWork) make the page something beautiful
 
 > [!IMPORTANT]\
->  In the future, this repositoy will be the privacy and no longer to show all the source code expect is on archiver
+> In the future, this repositoy will be the privacy and no longer to show all the source code expect is on archiver
+
+> [!WARNING]\
+> We make the social page for idea and when the database full is no longer to operate and will be on archiver
 
 <h2>The project to ahead</h2>
 
@@ -15,7 +18,7 @@ By using Next.JS, TailwindCSS, Shadcn(React Components FrameWork) make the page 
 
 <h2>License</h2>
 
-This project is licensed under Attribution-NonCommercial 2.0 International.
+This project is licensed under <ins>**Attribution-NonCommercial 2.0 International**</ins>.
 
 <h3>You are free to:</h3>
 
