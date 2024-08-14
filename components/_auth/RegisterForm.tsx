@@ -2,7 +2,6 @@
 
 import * as z from "zod"
 
-
 import { useState, useTransition } from "react"
 
 import { useForm } from "react-hook-form"
@@ -12,58 +11,69 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 
 import { CardWrapper } from "./CardWrapper";
 
-import { LoginSchema } from "@/schemas"
+import { RegisterSchema } from "@/schemas"
 import { Input } from "../ui/input"
 import { Button } from "../ui/button"
 import { FormError } from "../form-error"
 import { FormSuccess } from "../form-success"
+import { register } from "@/actions/register"
 
-import { login } from "@/actions/login"
-
-export function LoginForm() {
+export function RegisterForm() {
     const [error, setError] = useState<string | undefined>("")
     const [success, setSuccess] = useState<string | undefined>("")
 
     const [ isPending, startTransition ] = useTransition()
 
-export function LoginForm() {
-    const form = useForm<z.infer<typeof LoginSchema>>({
-        resolver: zodResolver(LoginSchema),
+    const form = useForm<z.infer<typeof RegisterSchema>>({
+        resolver: zodResolver(RegisterSchema),
         defaultValues: {
             email: "",
-            password: ""
+            password: "",
+            name: "",
         },
     });
 
-
-    const onSubmit = ( values: z.infer<typeof LoginSchema> ) => {
+    const onSubmit = ( values: z.infer<typeof RegisterSchema> ) => {
         setError("")
         setSuccess("")
 
         startTransition(() => {
-            login(values)
+            register(values)
                 .then((data) => {
                     setError(data.error)
                     setSuccess(data.success)
                 })
         })
     } 
-    
     return (
         <CardWrapper
-            headerLabel="Hello my deer again"
-            backButtonLabel="Don't have an account?"
-            backButtonHref="/auth/register"
+            headerLabel="Oh you're new so let's create the new account"
+            backButtonLabel="Have an account?"
+            backButtonHref="/auth/login"
             showSocial
         >
             <Form {...form}>
                 <form
-
                     onSubmit={form.handleSubmit(onSubmit)}
-
                     className="space-y-2"
                 >
                     <div className="space-y-4">
+                    <FormField
+                            control={form.control}
+                            name="name"
+                            render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel>Name</FormLabel>
+                                    <FormControl>
+                                        <Input
+                                            {...field}
+                                            disabled={isPending}
+                                        />
+                                    </FormControl>
+                                    <FormMessage />
+                                </FormItem>
+                            )}
+                        />
                         <FormField
                             control={form.control}
                             name="email"
@@ -92,10 +102,6 @@ export function LoginForm() {
                                         <Input
                                             {...field}
                                             disabled={isPending}
-                                    <FormLabel>Pasword</FormLabel>
-                                    <FormControl>
-                                        <Input
-                                            {...field}
                                             type="password"
                                         />
                                     </FormControl>
@@ -111,15 +117,9 @@ export function LoginForm() {
                         />
                         <Button
                             disabled={isPending}
-                            // TODO
-                        />
-                        <FormSuccess 
-                            // TODO
-                        />
-                        <Button
                             type="submit"
-                            className="w-full bg-blue-500"
-                        >Login</Button>
+                            className="w-full bg-gradient-to-tr to-cyan-500 from-fuchsia-400"
+                        >Register</Button>
                     </div>
                 </form>
             </Form>

@@ -20,7 +20,7 @@ interface CardWrapperProps {
 
 export function CardWrapper({ children, headerLabel, backButtonLabel, backButtonHref, showSocial }: CardWrapperProps) {
     return (
-        <Card className="w-[400px]">
+        <Card className="w-[400px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 shadow-2xl">
             <CardHeader>
                 <Header label={headerLabel} />
             </CardHeader>
@@ -32,6 +32,7 @@ export function CardWrapper({ children, headerLabel, backButtonLabel, backButton
                     <Social/>
                 </CardFooter>
             )}
+
             <CardFooter>
                 <BackButton
                     label={backButtonLabel}
