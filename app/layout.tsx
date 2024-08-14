@@ -25,7 +25,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <head />
       <body
         className={cn(
-          font.className
+         font.className
         )}
       >
         {children}
