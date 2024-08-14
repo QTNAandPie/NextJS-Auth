@@ -26,7 +26,6 @@ export function LoginForm() {
 
     const [ isPending, startTransition ] = useTransition()
 
-export function LoginForm() {
     const form = useForm<z.infer<typeof LoginSchema>>({
         resolver: zodResolver(LoginSchema),
         defaultValues: {
@@ -58,9 +57,7 @@ export function LoginForm() {
         >
             <Form {...form}>
                 <form
-
                     onSubmit={form.handleSubmit(onSubmit)}
-
                     className="space-y-2"
                 >
                     <div className="space-y-4">
@@ -92,10 +89,6 @@ export function LoginForm() {
                                         <Input
                                             {...field}
                                             disabled={isPending}
-                                    <FormLabel>Pasword</FormLabel>
-                                    <FormControl>
-                                        <Input
-                                            {...field}
                                             type="password"
                                         />
                                     </FormControl>
@@ -111,12 +104,6 @@ export function LoginForm() {
                         />
                         <Button
                             disabled={isPending}
-                            // TODO
-                        />
-                        <FormSuccess 
-                            // TODO
-                        />
-                        <Button
                             type="submit"
                             className="w-full bg-blue-500"
                         >Login</Button>
