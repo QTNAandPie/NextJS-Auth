@@ -26,7 +26,6 @@ export function LoginForm() {
 
     const [ isPending, startTransition ] = useTransition()
 
-export function LoginForm() {
     const form = useForm<z.infer<typeof LoginSchema>>({
         resolver: zodResolver(LoginSchema),
         defaultValues: {
@@ -92,10 +91,6 @@ export function LoginForm() {
                                         <Input
                                             {...field}
                                             disabled={isPending}
-                                    <FormLabel>Pasword</FormLabel>
-                                    <FormControl>
-                                        <Input
-                                            {...field}
                                             type="password"
                                         />
                                     </FormControl>
@@ -108,13 +103,6 @@ export function LoginForm() {
                         />
                         <FormSuccess 
                             message={success}
-                        />
-                        <Button
-                            disabled={isPending}
-                            // TODO
-                        />
-                        <FormSuccess 
-                            // TODO
                         />
                         <Button
                             type="submit"
