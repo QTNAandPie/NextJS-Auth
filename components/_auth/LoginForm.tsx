@@ -2,6 +2,7 @@
 
 import * as z from "zod"
 
+
 import { useState, useTransition } from "react"
 
 import { useForm } from "react-hook-form"
@@ -16,6 +17,7 @@ import { Input } from "../ui/input"
 import { Button } from "../ui/button"
 import { FormError } from "../form-error"
 import { FormSuccess } from "../form-success"
+
 import { login } from "@/actions/login"
 
 export function LoginForm() {
@@ -24,6 +26,7 @@ export function LoginForm() {
 
     const [ isPending, startTransition ] = useTransition()
 
+export function LoginForm() {
     const form = useForm<z.infer<typeof LoginSchema>>({
         resolver: zodResolver(LoginSchema),
         defaultValues: {
@@ -31,6 +34,7 @@ export function LoginForm() {
             password: ""
         },
     });
+
 
     const onSubmit = ( values: z.infer<typeof LoginSchema> ) => {
         setError("")
@@ -44,6 +48,7 @@ export function LoginForm() {
                 })
         })
     } 
+    
     return (
         <CardWrapper
             headerLabel="Hello my deer again"
@@ -53,7 +58,9 @@ export function LoginForm() {
         >
             <Form {...form}>
                 <form
+
                     onSubmit={form.handleSubmit(onSubmit)}
+
                     className="space-y-2"
                 >
                     <div className="space-y-4">
@@ -85,6 +92,10 @@ export function LoginForm() {
                                         <Input
                                             {...field}
                                             disabled={isPending}
+                                    <FormLabel>Pasword</FormLabel>
+                                    <FormControl>
+                                        <Input
+                                            {...field}
                                             type="password"
                                         />
                                     </FormControl>
@@ -100,6 +111,12 @@ export function LoginForm() {
                         />
                         <Button
                             disabled={isPending}
+                            // TODO
+                        />
+                        <FormSuccess 
+                            // TODO
+                        />
+                        <Button
                             type="submit"
                             className="w-full bg-blue-500"
                         >Login</Button>
