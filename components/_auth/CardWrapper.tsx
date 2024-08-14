@@ -32,6 +32,7 @@ export function CardWrapper({ children, headerLabel, backButtonLabel, backButton
                     <Social/>
                 </CardFooter>
             )}
+
             <CardFooter>
                 <BackButton
                     label={backButtonLabel}
