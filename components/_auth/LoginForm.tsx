@@ -57,9 +57,7 @@ export function LoginForm() {
         >
             <Form {...form}>
                 <form
-
                     onSubmit={form.handleSubmit(onSubmit)}
-
                     className="space-y-2"
                 >
                     <div className="space-y-4">
@@ -105,6 +103,7 @@ export function LoginForm() {
                             message={success}
                         />
                         <Button
+                            disabled={isPending}
                             type="submit"
                             className="w-full bg-blue-500"
                         >Login</Button>
