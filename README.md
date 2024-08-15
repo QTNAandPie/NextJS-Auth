@@ -7,7 +7,7 @@
 > In the future, this repositoy will be the privacy and no longer to show all the source code expect is on archiver
 
 > [!WARNING]\
-> We make the social page for idea and when the database full is no longer to operate and will be on archiver
+> We make the social page for idea and when the database full and no longer to operate and will be on archiver
 
 <h2>The project to ahead</h2>
 
