@@ -1,7 +1,7 @@
 "use client"
 
 import { FcGoogle } from "react-icons/fc"
-import { FaYahoo } from "react-icons/fa"
+import { FaGithub } from "react-icons/fa"
 
 import { Button } from "@/components/ui/button"
 
@@ -22,7 +22,7 @@ export function Social() {
                 variant="outline"
                 onClick={() => {}}
             >
-                <FaYahoo className="h-5 w-5" />
+                <FaGithub className="h-5 w-5" />
             </Button>
         </div>
     )

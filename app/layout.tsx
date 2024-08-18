@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export const font = Be_Vietnam_Pro({
   subsets : ["latin"],
-  weight : "600"
+  weight : "500"
 })
 
 interface RootLayoutProps {
