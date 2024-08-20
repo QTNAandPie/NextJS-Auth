@@ -1,6 +1,6 @@
-<h1>Next.JS Social Page (In develop)</h1>
+<h1>Next.JS Auth Page (In develop)</h1>
 
-- This is the Next.JS Social Page that allow you to posting and sharing the good time
+- This is the Next.JS Auth Page that make the authentication system
 - By using Next.JS, TailwindCSS, Shadcn(React Components FrameWork) make the page something beautiful
 
 > [!IMPORTANT]\
@@ -8,13 +8,6 @@
 
 > [!WARNING]\
 > We make the social page for idea and when the database full and no longer to operate and will be on archiver
-
-<h2>The project to ahead</h2>
-
-- Auth System
-- New feed
-- Threated
-- Message (This required the large database)
 
 <h2>License</h2>
 
